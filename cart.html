@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hompage</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet" />
+    
+</head>
+
+<body>
+    <!-- START OF NAV -->
+    <nav>
+        <div class="menu-container">
+            <div class="menu-left">
+                <ul>
+                    <li class="menu-logo"><a href="index.html">sHopper</a></li>
+                    <li class="menu-item" id="menuContextActivator">Shop <span class="material-icons-sharp">expand_more</span></li>
+                    <li class="menu-item"><a href="/">Sale</a></li>
+                    <li class="menu-item"><a href="/">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="menu-right">
+                <div class="search-bar">
+                    <input type="text" id="searchBar" placeholder="Search products...">
+                    <a href="/search" class="search-bar-button" id="searchButton"><span class="material-icons-sharp search-btn">search</span></a>
+                </div>
+    
+                <div class="user-menu-controls">
+                    <a href="cart.html" class="menu-button" id="cartMenuButton" style="display: none;"><span class="material-icons-sharp">shopping_cart</span>Cart <span id="cartItemsCount" class="cart-info-badge">0</span></a>
+                    <a href="profile.html" class="menu-button" id="accountMenuButton" style="display: none;"><span class="material-icons-sharp">account_circle</span>Profile</a>
+                    <a href="login.html" class="menu-button" id="loginMenuButton"><span class="material-icons-sharp">account_circle</span>Login</a>
+                    <a href="signup.html" class="menu-button" id="registerMenuButton"><span class="material-icons-sharp">person_add</span>Register</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-context" id="menuContext">
+            <ul>
+                <li><a href="products/all.html">All Products</a></li>
+                <li><a href="products/drinks.html">Drinks</a></li>
+                <li><a href="products/cookies.html">Cookies</a></li>
+                <li><a href="products/soups.html">Soups</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- END OF NAV -->
+
+    <div class="cart-container" id="cartContainer">
+        <h1>Your Cart</h1>
+        <table id="cart">
+            <thead>
+                <tr>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            <tbody id="cartBody">
+
+            </tbody>
+        </table>
+        <h3 id="cartTotal"></h3>
+    </div>
+    <div class="cart-button-container">
+        <p class="button" id="clearCart">
+            Clear Cart
+        </p>
+
+        <p class="button" id="checkout">
+            Checkout
+        </p>
+    </div>
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <script src="js/indexnew.js" defer></script>
+</body>
+
+</html>

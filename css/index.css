@@ -1,0 +1,1196 @@
+
+/* #region GLOBAL */
+/* Author: All team members */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --global-font: 'Nunito', sans-serif;
+    --white: #efefef;
+    --white400: #cccccc;
+    --green500: #6a994e;
+    --greenAlpha: #6a994e4d;
+    --green400: #386641;
+    --grey: #6b6b6b;
+    --transition1: color 0.3s ease-in;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #efefef;
+    font-family: var(--global-font);
+}
+
+.button {
+    background-color: var(--green500);
+    color: var(--white);
+    cursor: pointer !important;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in;
+    width: fit-content;
+    
+}
+
+.icon-color {
+    color: var(--grey);
+    
+}
+
+
+.box-shadow {
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+}
+.button:hover {
+    background-color: var(--green400);
+    transition: background-color 0.3s ease-in;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.back-button {
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+    top: 1;
+    left: 1;
+    color: var(--green500);
+    transition: var(--transition1);
+}
+
+.back-button:hover {
+    color: var(--green400);
+    transition: var(--transition1);
+}
+
+.back-button span {
+    font-size: 60px;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--greenAlpha);
+    position: absolute;
+    top: 5rem;
+    left: 40rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    
+    
+}
+
+.message-message {
+    color: var(--green400);
+    font-size: 14px !important;
+    margin-right: 0.5rem;
+}
+
+.message-close {
+    cursor: pointer;
+    font-size: 12px;
+    color: var(--green400);
+    transition: color 0.3s ease-in;
+}
+
+.message-close:hover {
+    color: var(--grey);
+    transition: color 0.3s ease-in;
+}
+/* #endregion */
+
+/* #region Navbar */
+/* Author: Michael Boisvenu-Landry */
+nav {
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 999 !important;
+    margin-bottom: 2em;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+    background-color: var(--green500);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: auto
+}
+
+.menu-logo a {
+    font-size: 28px;
+    margin-right: 2rem;
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition1);
+    font-style: italic;
+    font-weight: 800;
+}
+
+.menu-logo a:hover {
+    color: var(--white400);
+    transition: var(--transition1);
+}
+
+.menu-logo a:visited {
+    color: var(--white);
+    text-decoration: none;
+}
+.menu-left {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-left ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    list-style-type: none;
+    align-items: center;
+    text-align: center;
+}
+
+.menu-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.menu-item,
+.menu-item a {
+    color: var(--white);
+    font-size: 18px;
+    text-align: center;
+    padding-top: 0.3em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 1em;
+    cursor: pointer;
+    transition: var(--transition1);
+    text-decoration: none;
+
+}
+
+.menu-item a {
+    margin-top: -0.35rem;
+}
+.menu-item:hover,
+.menu-item a:hover{
+    color: var(--white400);
+    transition: var(--transition1);
+}
+
+.user-menu-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-menu-controls a {
+    text-decoration: none;
+    background-color: var(--white);
+    color: #605f5f;
+    padding: 0.5em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5em;
+    border-radius: 5px;
+    height: 1.5rem;
+    width: 6em;
+    transition: var(--transition1);
+}
+
+.user-menu-controls a:hover {
+    background-color: var(--white400);
+    transition: background-color 0.3s ease-in;
+}
+
+.user-menu-controls a span {
+    margin-right: 0.5rem;
+}
+
+.cart-info-badge {
+    background-color: var(--green500);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    padding: 0.2em;
+    height: 1.2em;
+    width: auto;
+    margin-left: 0.4em;
+}
+
+.menu-context {
+    position: absolute;
+    top: 4.3em;
+    left: 10em;
+    height: 14.7em;
+    background-color: var(--green500);
+    width: 10em;
+    display: none;
+}
+
+.menu-context ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.menu-context ul li {
+    padding: 1em 0.5em;
+    transition: background-color 0.3s ease-in;
+    cursor: pointer;
+}
+
+.menu-context ul li:hover {
+    padding: 1em 0.5em;
+    background-color: var(--green400);
+    transition: background-color 0.3s ease-in;
+}
+.menu-context ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+}
+/* #endregion */
+
+/* #region Search Bar */
+/* Author: Michael Boisvenu-Landry */
+.search-bar {
+    flex-direction: row;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-right: 1.5em;
+}
+
+.search-bar input {
+    background-color: var(--white);
+    border: none;
+    padding: 0.5em;
+    margin-right: -2.5em;
+    border-radius: 5px;
+    transition: width 0.3s ease-in;
+    width: 12em;
+    height: 1.75rem;
+}
+
+.search-bar input:focus {
+    transition: width 0.3s ease-in;
+    width: 18em;
+}
+
+.search-bar-button {
+    border: none;
+    outline: none;
+    position: relative;
+    color: var(--green500);
+    padding-top: 0.4em;
+}
+/* #endregion */
+
+/* #region Carousel */
+/* Author: Shuhan Han */
+.wrapper {
+    position: relative;
+    width: 800px;
+    height: 300px;
+    overflow: hidden;
+    margin: 50px auto;
+    margin-top: 100px;
+    display: block;
+}
+
+.wrapper ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.dot {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.slides {
+    width: 3200px;
+    left: 0px;
+    transition: all .5s;
+}
+
+ul.slides li {
+    width: 800px;
+    height: 300px;
+    overflow: hidden;
+    float: left;
+}
+
+ul.slides li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dot {
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dot li {
+    border: 1px solid #fff;
+    margin: 0 5px;
+    width: 24px;
+    height: 10px;
+}
+
+.slide_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 100%;
+    color: #fff;
+    position: absolute;
+    font-size: 24px;
+}
+
+.carousel-label {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--green500);
+    position: relative;
+    bottom: -230px;
+}
+
+.carousel-card {
+    top: -36px;
+    position: relative;
+    z-index: -1
+}
+
+#prevSlide {
+    left: 0;
+}
+
+#nextSlide {
+    right: 0;
+}
+
+.slide_btn i {
+    color: var(--grey);
+    transition: .5s;
+}
+
+.slide_btn:hover i {
+    color: var(--green400);
+}
+
+.menu {
+    position: static;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.menu li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 35px;
+    font-size: 40px;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.menu li:nth-child(2) {
+    visibility: hidden;
+}
+
+/* #endregion */
+
+/* #region Homepage */
+/* Author: Shuhan Han, Michael Boisvenu-Landry */
+.home-product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: fit-content;
+    margin-bottom: 3rem;
+}
+
+.home-product-category-title {
+    padding-left: 2rem;
+    font-size: 24px;
+}
+
+.card-clickable {
+    cursor: pointer !important;
+}
+
+.home-product-card {
+    cursor: pointer !important;
+    width: calc(33.33% - 2rem);
+    height: 320px;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease-out;
+}
+
+.home-product-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-out;
+}
+
+.home-product-card-content {
+    flex-grow: 1;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.home-product-img {
+    object-fit: cover;
+    width: 100%;
+    min-height: 150px;
+    max-height: 300px;
+}
+
+.home-product-name {
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.home-product-description {
+    font-style: italic;
+    font-size: 14px;    
+    margin-bottom: 0.5rem;
+    text-overflow: ellipsis;
+}
+
+.home-product-price {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.card-discount {
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+.percentage-off {
+    margin-left: 0.5rem;
+    font-weight: 900;
+    color: var(--white);
+    padding: 5px;
+    background-color: var(--green500);
+}
+
+.home-product-rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.home-product-rating .star-rating {
+    color: var(--green500);
+}
+
+.home-product-rating .product-rating-count {
+    margin-left: 0.25rem;
+}
+
+/* #endregion */
+
+/*#region Product Page */
+/* Author: Michael Boisvenu-Landry */
+.product-page-container {
+    display: flex;
+    flex-direction: row;
+    
+    
+    padding: 3rem 10rem;
+}
+
+.product-page-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-page-image {
+    margin-right: 4rem;
+}
+
+.product-page-image img {
+    width: auto;
+    height: 450px;
+}
+
+#productPageName {
+    color: var(--green500);
+    font-weight: 700;
+    font-size: 42px;
+    margin-bottom: -1rem;
+}
+
+#productPagePrice {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#productPageCategory {
+    margin-bottom: -1rem;
+}
+/* #endregion */
+
+/* #region Cart */
+/* Author: Michael Boisvenu-Landry */
+tr {
+    outline: 2px solid var(--green500);
+    border-radius: 5px;
+    
+
+}
+
+td {
+    
+}
+
+thead tr td {
+    font-weight: 700;
+    padding: 0.5rem 0.5rem;
+}
+
+table {
+    width: 100%;
+}
+
+.cart-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1rem 10rem;
+}
+
+tbody tr td {
+    padding-left: 1rem;
+}
+.cart-container h1 {
+    font-size: 32px;
+    color: var(--green500);
+    margin-bottom: 1rem;
+}
+.cart-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+}
+
+.cart-item img {
+    margin-right: 1rem;
+    
+}
+
+.cart-item-name {
+    padding-top: 1rem;
+}
+
+tr .button {
+    margin-left: -1rem;
+}
+
+.cart-button-container {
+    padding-left: 9.8rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.cart-button-container .button {
+    margin-right: 1rem;
+}
+/* #endregion */
+
+/* #region ShoppingPage */
+
+/* Author: Michael Boisvenu-Landry */
+.results-container {
+    padding: 1rem;
+}
+
+.results-container #resultText {
+    color: var(--green500);
+    margin-bottom: -1rem;
+    padding-left: 9rem;
+}
+
+.results-container #resultCount {
+    padding-left: 9rem;
+}
+.shopping-page-container {
+    display: flex;
+    flex-direction: row;
+    padding: 3rem 1rem;
+}
+
+.shopping-page-links {
+    width: 33%;
+    height: 200px;
+    padding: 1rem;
+}
+
+.shopping-page-links h1 {
+    color: var(--green500);
+}
+.shopping-page-links ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    outline: 0.5px solid var(--grey);
+    
+}
+
+.shopping-page-links ul li {
+    cursor: pointer !important;
+    padding: 1rem;
+    border-bottom: 0.5px solid var(--grey);
+    background-color: var(--white);
+    color: var(--green500);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.shopping-page-links ul li:hover {
+    background-color: var(--green400);
+}
+
+.shopping-page-links ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    width: 100%;
+    padding: 0;
+    color: var(--green500); /* Set the color explicitly for non-hover state */
+    transition: color 0.3s ease-in-out; /* Add the transition property for color */
+}
+
+.shopping-page-links ul li:hover a {
+    color: var(--white); /* Change color on hover */
+}
+
+.shopping-page-links ul li a:visited {
+    text-decoration: none;
+}
+
+.shopping-page-links ul .category-link-active {
+    background-color: var(--green500);
+    color: var(--white);
+}
+
+.shopping-page-links ul .category-link-active a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--white); /* Set the color explicitly for the active state */
+}
+
+.shopping-page-links ul .category-link-active a:visited {
+    text-decoration: none;
+}
+
+#productsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card-shopping-container {
+    flex-basis: calc(25% - 20px);
+    box-sizing: border-box;
+    outline: 1px solid var(--grey);
+    width: 25%;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in;
+}
+
+.product-card-shopping-container:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in;
+}
+
+.product-card-shopping-top {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--grey);
+}
+
+.product-card-shopping-top h1 {
+    font-size: 20px;
+    padding: 0 1rem;
+    margin-bottom: -0.5rem;
+}
+
+.product-card-shopping-top p {
+    font-size: 14px;
+    padding: 0 1rem;
+}
+
+.product-card-shopping-bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+.product-card-shopping-bottom h2 {
+    font-size: 16px;
+    font-weight: 400;
+    
+}
+
+.product-card-price-container {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bolder {
+    font-weight: 700;
+}
+.product-card-price {
+    margin-right: 0.5rem;
+}
+.product-card-shopping-img {
+    padding: 0;
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card-button-container {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.more-info-button {
+    margin-right: 1rem;
+}
+
+/* #endregion */
+
+/* #region Login & Register */
+/* Author: Maha Fouda */
+.user-page-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    
+}
+
+.form {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 300px;
+}
+
+
+.back-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    color: var(--white);
+    font-size: 18px;
+    /* Adjust the size as needed */
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 1px;
+    color: var(--green500);
+    font-size: 13px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    background-color: aliceblue;
+    border: 1px solid var(--green500);
+    border-radius: 4px;
+}
+
+.form-button {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: var(--white);
+    color: var(--green500);
+    border: 1px solid var(--green500);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.form-button:hover {
+    background-color: var(--green500);
+    color: var(--white);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+.forgot-password,
+.register-link {
+    color: #7FAD39;
+    text-decoration: underline;
+}
+
+.login-container p {
+    color: darkgrey;
+    font-size: 13px;
+}
+
+.error-message {
+    color: var(--green400);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.login-link {
+    color: #7FAD39;
+    text-decoration: underline;
+}
+
+
+/* #endregion */
+
+/* #region Featured Products */
+/* Author: Shuhan Han */
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #555;
+}
+
+.card-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e44d26;
+    margin-top: 10px;
+}
+
+.card-rating {
+    font-size: 16px;
+    color: #6f70a3;
+    margin-top: 10px;
+}
+/* #endregion */
+
+/* #region Profile */
+/* Author: NnamdiEchegini */
+#userProfileBody{
+    display: flex;
+    justify-content: center;
+}
+
+#userProfileContainer{
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    height: 722px;
+    margin-top: 10px;
+
+}
+/**LEFT CONTAINER**/
+#leftProfileContainer{
+    background-color: white;
+    margin: 15px 50px 0 40px;
+    border-radius: 10px;
+    width: 27%;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+#profilePicContainer{
+    margin-top: 30px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#profilePhoto{
+    height: 130px ;
+    width: 140px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid var(--green500);
+
+}
+
+#profileNameContainer{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -2rem;
+    justify-content: center;
+    padding: 5px;
+    color: var(--green500);
+    
+}
+#profileNameContainer h3:first-child{
+    margin-right: 7px;
+}
+
+#profileNameContainer h3{
+    font-weight: 900;
+    font-size: larger;
+}
+
+#emailContainer{
+    display: flex;
+    justify-content: center;
+}
+#emailContainer h4{
+    font-style: italic;
+
+}
+
+#dpchangeContainer{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#dpButton {
+    cursor:  pointer !important;
+    font-family: var(--global-font);
+    padding: 8px;
+    color: white;
+    background-color: var(--green500);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease-in;
+}
+
+#dpButton:hover {
+    background-color: var(--green400);
+    transition: background-color 0.3s ease-in;
+}
+
+/*right side of user registration*/
+
+#rightProfileContainer{
+    background-color: white;
+    width: 62%;
+    height: 695px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.formTitle{
+    margin-bottom: 1rem;
+    color: var(--green500);
+    
+    
+}
+
+.userInfoInputBoxOne{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+   
+}
+.userInfoInputBoxOne label{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--green500);
+
+}
+
+.userInfoInputBoxOne input{
+    border-radius: 7px;
+    outline: none;
+    border: 2px solid var(--green500);
+    padding: 0 10px;
+    font-weight: 500;
+    height: 30px;
+    transition: border-color 0.3s ease-in;
+}
+
+.userInfoInputBoxOne input:focus {
+    border-color: var(--green400);
+    transition: border-color 0.3s ease-in;
+}
+.userInfoInputBoxTwo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+}
+.userInfoInputBoxTwo label{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 7px;
+    color: var(--green500);
+
+}
+
+.userInfoInputBoxTwo input{
+    border-radius: 7px;
+    outline: none;
+    border: 2px solid var(--green500);
+    padding: 0 10px;
+    font-weight: 500;
+    height: 30px;
+    transition: border-color 0.3s ease-in;
+}
+
+.userInfoInputBoxTwo input:focus {
+    border-color: var(--green400);
+    transition: border-color 0.3s ease-in;
+}
+
+.userInfoInputBoxTwo select {
+    border-radius: 7px;
+    outline: none;
+    border: 2px solid var(--green500);
+    padding: 0 10px;
+    font-weight: 500;
+    height: 30px;
+    transition: border-color 0.3s ease-in;
+}
+
+.fandlname{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.fandlname:first-child{
+    margin-right: 8px;
+}
+
+.formSubmitBtnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 2px;
+    
+}
+
+.submitbtn{
+    background-color: var(--green500);
+    color: var(--white);
+    cursor: pointer !important;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in;
+    width: 80px;
+    outline: none;
+    border: none;
+    height: fit-content;
+    font-size: 16px;
+    
+} 
+
+.submitbtn:hover {
+    background-color: var(--green400);
+    transition: background-color 0.3s ease-in;
+}
+
+.errorSpan {
+    color: red;
+    font-size: 15px;
+    margin-top: 2px;
+    display: block;
+}
+/* #endregion */

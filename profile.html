@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hompage</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet" />
+    
+</head>
+
+<body>
+    <!-- START OF NAV -->
+    <nav>
+        <div class="menu-container">
+            <div class="menu-left">
+                <ul>
+                    <li class="menu-logo"><a href="index.html">sHopper</a></li>
+                    <li class="menu-item" id="menuContextActivator">Shop <span class="material-icons-sharp">expand_more</span></li>
+                    <li class="menu-item"><a href="/">Sale</a></li>
+                    <li class="menu-item"><a href="/">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="menu-right">
+                <div class="search-bar">
+                    <input type="text" id="searchBar" placeholder="Search products...">
+                    <a href="/search" class="search-bar-button" id="searchButton"><span class="material-icons-sharp search-btn">search</span></a>
+                </div>
+    
+                <div class="user-menu-controls">
+                    <a href="cart.html" class="menu-button" id="cartMenuButton" style="display: none;"><span class="material-icons-sharp">shopping_cart</span>Cart <span id="cartItemsCount" class="cart-info-badge">0</span></a>
+                    <a href="profile.html" class="menu-button" id="accountMenuButton" style="display: none;"><span class="material-icons-sharp">account_circle</span>Profile</a>
+                    <a href="login.html" class="menu-button" id="loginMenuButton"><span class="material-icons-sharp">account_circle</span>Login</a>
+                    <a href="signup.html" class="menu-button" id="registerMenuButton"><span class="material-icons-sharp">person_add</span>Register</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-context" id="menuContext">
+            <ul>
+                <li><a href="./products/all.html">All Products</a></li>
+                <li><a href="./products/drinks.html">Drinks</a></li>
+                <li><a href="./products/cookies.html">Cookies</a></li>
+                <li><a href="./products/soups.html">Soups</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- END OF NAV -->
+    <div id="userProfileBody">
+        <div id="userProfileContainer">
+    
+            <div id="leftProfileContainer">
+                <div id="profilePicContainer">
+                    <img src="Images/defaultAvatar.png" alt="" id="profilePhoto">
+                </div>
+                <div id="profileNameContainer">
+                    <h3 id="userNameDisplay">Username</h3>
+                </div>
+                <div id="emailContainer">
+                    <h4 id="emailDisplay">@email.com</h4>
+                </div>
+                <div id="dpchangeContainer">
+                    <button id="dpButton">Upload New Photo</button>
+                </div>
+        
+            </div>
+        
+            <div id="rightProfileContainer">
+                <div class="formTitle">
+                    <h1>Edit Profile</h1>
+                </div>
+                <form onsubmit="validateAndSubmit(); return false;">
+                    
+                        <div class="userInfoInputBoxOne">
+                            <div class="fandlname">
+                                <label for="firstName">First Name:</label>
+                                <input type="text" id="firstname" name="firstname" />
+                                <span id="firstNameError" class="errorSpan"></span>
+                            </div>
+                        
+                            <div class="fandlname">
+                                <label for="lastName">Last Name:</label>
+                                <input type="text" id="lastname" name="lastname" />
+                                <span id="lastNameError" class="errorSpan"></span>
+                            </div>
+                        </div>
+                        <div class="userInfoInputBoxTwo">
+                            <label for="userName">User Name:</label>
+                            <input type="text" id="username" name="username" disabled/>
+                            <span id="userNameError" class="errorSpan"></span>
+                        
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" disabled/>
+                            <span id="emailError" class="errorSpan"></span>
+                       
+                            <label for="mobileNumber">Mobile Number:</label>
+                            <input type="number" id="mobileNumber" name="mobileNumber" />
+                            <span id="mobileNumberError" class="errorSpan"></span>
+                       
+                            <label for="addressLine1">Address Line 1:</label>
+                            <input type="text" id="addressLine1" name="addressLine1" />
+                            <span id="addressLine1Error" class="errorSpan"></span>
+        
+                        
+                            <label for="addressLine2">Address Line 2:</label>
+                            <input type="text" id="addressLine2" name="addressLine2" />
+        
+                            <label for="postalCode">Postal Code:</label>
+                            <input type="text" id="postalCode" name="postalCode" />
+                            <span id="postalCodeError" class="errorSpan"></span>
+                       
+                            <label for="province">Province:</label>
+                            <select name="province" id="province">
+                                <option value="Alberta">Alberta</option>
+                                <option value="British Columbia">British Columbia</option>
+                                <option value="Manitoba">Manitoba</option>
+                                <option value="Newfoundland & Labrador">Newfoundland & Labrador</option>
+                                <option value="Northwest Territories">Northwest Territories</option>
+                                <option value="Nova Scotia">Nova Scotia</option>
+                                <option value="Nunavut">Nunavut</option>
+                                <option value="Ontario">Ontario</option>
+                                <option value="Prince Edward Island">Prince Edward Island</option>
+                                <option value="Quebec">Quebec</option>
+                                <option value="Saskatchewan">Saskatchewan</option>
+                                <option value="Yukon">Yukon</option>
+                            </select>
+                            
+                            <span id="provinceError" class="errorSpan"></span>
+        
+        
+                            <label for="city">City:</label>
+                            <input type="text" id="city" name="city" />
+                            <span id="cityError" class="errorSpan"></span>
+        
+                        </div>
+                        
+                        <div>
+                            <div class="formSubmitBtnContainer">
+                                <button class="button" id="submitProfileButton">Submit</button>
+                                <p id="logoutButton" class="button">Log out</p>
+                            </div>
+                        </div>
+                </form>
+        
+            </div>
+        </div>
+        
+    </div>
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <script src="js/indexnew.js" defer></script>
+</body>
+
+</html>
